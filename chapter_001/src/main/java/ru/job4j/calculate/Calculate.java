@@ -3,7 +3,7 @@ package ru.job4j.calculate;
 /**
 *Calculate.
 *
-*@autor Alexander Krikunov (krikunov1990@mail.ru)
+*@author Alexander Krikunov (krikunov1990@mail.ru)
 */
 
 public class Calculate {
