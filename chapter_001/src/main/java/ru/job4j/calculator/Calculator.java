@@ -26,7 +26,7 @@ public class Calculator {
      * @param first первый аргумент.
      * @param second второй аргумент.
      */
-    public void subtract (double first, double second) {
+    public void subtract(double first, double second) {
         this.result = first - second;
     }
 
@@ -35,7 +35,7 @@ public class Calculator {
      * @param first первый аргумент.
      * @param second второй аргумент.
      */
-    public void div (double first, double second) {
+    public void div(double first, double second) {
         this.result = first / second;
     }
 
@@ -44,7 +44,7 @@ public class Calculator {
      * @param first первый аргумент.
      * @param second второй аргумент.
      */
-    public void multiple (double first, double second) {
+    public void multiple(double first, double second) {
         this.result = first * second;
     }
 
