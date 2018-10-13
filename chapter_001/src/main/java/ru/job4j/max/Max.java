@@ -7,14 +7,26 @@ package ru.job4j.max;
 public class Max {
 
     /**
-     * вычисление наибольшего числа.
+     * вычисление наибольшего числа из двух.
      * @param first первое число.
      * @param second второе число.
      * @return наибольшее.
      */
     public int max(int first, int second) {
+       return first > second ? first : second;
+    }
 
-       int greatest = first > second ? first : second;
-            return greatest;
+    /**
+     * вычисление наибольшего числа из трёх.
+     *
+     * @param first первое число.
+     * @param second второе число.
+     * @param third третье число.
+     * @return наибольшее.
+     */
+    public int max(int first, int second, int third) {
+        int temp = this.max(first, second);
+        temp = this.max(temp, third);
+        return temp;
     }
 }

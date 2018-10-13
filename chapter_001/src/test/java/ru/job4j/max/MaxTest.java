@@ -14,15 +14,23 @@ public class MaxTest {
     @Test
     public void testMax() {
         Max maxim = new Max();
-        int result = maxim.max(1, 2);
-        assertThat(result, is(2));
+        int result = maxim.max(1, 2, 3);
+        assertThat(result, is(3));
     }
 
     @Test
     public void testMax2() {
         Max maxim = new Max();
-        int result = maxim.max(2, 1);
-        assertThat(result, is(2));
+        int result = maxim.max(4, 2, 1);
+        assertThat(result, is(4));
+
+    }
+
+    @Test
+    public void testMax3() {
+        Max maxim = new Max();
+        int result = maxim.max(1, 5, 3);
+        assertThat(result, is(5));
 
     }
 }
