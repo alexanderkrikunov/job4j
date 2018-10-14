@@ -20,6 +20,7 @@ public class TriangleTest {
         double expected = 2D;
         assertThat(result, closeTo(expected, 0.1));
     }
+
     @Test
     public void whenTriangleAreaError() {
         Point a = new Point(0, 0);
