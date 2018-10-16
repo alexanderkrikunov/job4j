@@ -4,6 +4,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
 
+
+/**
+ * @author Alexander Krikunov (krikunov1990@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
 public class FindLoopTest {
     @Test
     public void whenArrayHasLengh5Then0() {
