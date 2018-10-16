@@ -13,13 +13,11 @@ public class Check {
      * @return результат.
      */
     public boolean mono(boolean[] data) {
-        boolean result = false;
+        boolean result = true;
         for (boolean i : data) {
             if (data[0] != i) {
                 result = false;
                 break;
-            } else {
-                result = true;
             }
         }
         return result;
