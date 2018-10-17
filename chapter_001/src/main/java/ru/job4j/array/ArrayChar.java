@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 /**
- *
+ * Слово начинается с ...
  *
  * @author Alexander Krikunov (krikunov1990@mail.ru)
  */
@@ -11,6 +11,7 @@ public class ArrayChar {
     public ArrayChar(String line) {
         this.data = line.toCharArray();
     }
+
     /**
      * Проверяет. что слово начинается с префикса.
      * @param prefix префикс.
