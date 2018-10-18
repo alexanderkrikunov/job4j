@@ -20,7 +20,7 @@ public class ArrayChar {
     public boolean starWith(String prefix) {
         boolean result = true;
         char[] value = prefix.toCharArray();
-        for (char i = 0; i < 2; i++) {
+        for (char i = 0; i < value.length; i++) {
             if (data[i] != value[i]) {
                 result = false;
             }

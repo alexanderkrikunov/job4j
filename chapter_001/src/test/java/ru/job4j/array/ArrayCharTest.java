@@ -12,14 +12,14 @@ public class ArrayCharTest {
     @Test
     public void whenStartWithPrefixThenTrue() {
         ArrayChar word = new ArrayChar("Hello");
-        boolean result = word.starWith("He");
+        boolean result = word.starWith("Hel");
         assertThat(result, is(true));
     }
 
     @Test
     public void whenNotStartWithPrefixThenFalse() {
         ArrayChar word = new ArrayChar("Hello");
-        boolean result = word.starWith("Hi");
+        boolean result = word.starWith("Hep");
         assertThat(result, is(false));
     }
 }
