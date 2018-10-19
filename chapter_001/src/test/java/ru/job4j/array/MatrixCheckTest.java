@@ -33,4 +33,26 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
+    @Test
+    public void whenDataMonoTrue2On2() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = {
+                {true, false},
+                {false, true}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(true));
+    }
+
+    @Test
+    public void whenDataMonoFalse2On2() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = {
+                {true, true},
+                {false, false}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(false));
+    }
 }
