@@ -10,6 +10,7 @@ import static org.hamcrest.core.Is.is;
  * @since 0.1
  */
 public class MatrixCheckTest {
+
     @Test
     public void whenDataMonoByTrueThenTrue() {
         MatrixCheck check = new MatrixCheck();
