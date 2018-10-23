@@ -71,15 +71,21 @@ public class Logic {
         boolean result = false;
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table.length; j++) {
-                if (table[2][j] == 1) {
+                if (table[i][j] == 1 || table[j][i] == 1) {
                     result = true;
+                } else {
+                    result = false;
+                    break;
                 }
+            }
+            if (result) {
+                break;
             }
         }
         return result;
     }
 
-    private int[][] convert() {
+    public int[][] convert() {
         int[][] table = new int[this.size][this.size];
         for (int row = 0; row != table.length; row++) {
             for (int cell = 0; cell != table.length; cell++) {
