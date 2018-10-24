@@ -36,6 +36,13 @@ public class Paint {
         return this.loopBy(height, 2 * height - 1, (row, column) -> row >= height - column - 1 && row + height - 1 >= column);
     }
 
+    /**
+     * универсальный метод.
+     * @param height высота.
+     * @param width ширина.
+     * @param predict  условие проставления галки.
+     * @return результат.
+     */
     private String loopBy(int height, int width, BiPredicate<Integer, Integer> predict) {
         StringBuilder screen = new StringBuilder();
         for (int row = 0; row != height; row++) {

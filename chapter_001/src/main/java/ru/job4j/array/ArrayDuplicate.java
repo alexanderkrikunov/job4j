@@ -15,15 +15,15 @@ public class ArrayDuplicate {
      * @return результат.
      */
     public String[] remove(String[] array) {
-        int newSize = array.length;
-        for (int out = 0; out < newSize; out++) {
-            for (int in = out + 1; in < newSize; in++) {
+        int size = array.length;
+        for (int out = 0; out < size; out++) {
+            for (int in = out + 1; in < size; in++) {
                 if (array[out].equals(array[in])) {
-                    array[in] = array[--newSize];
+                    array[in] = array[--size];
                     --in;
                 }
             }
         }
-        return Arrays.copyOf(array, newSize);
+        return Arrays.copyOf(array, size);
     }
 }

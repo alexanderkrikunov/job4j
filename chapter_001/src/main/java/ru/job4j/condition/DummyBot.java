@@ -5,6 +5,7 @@ package ru.job4j.condition;
  * @author Alexander Krikunov (krikunov1990@mail.ru)
  */
 public class DummyBot {
+
     /**
      * Отвечает на вопрос.
      * @param question Вопрос от клиента.

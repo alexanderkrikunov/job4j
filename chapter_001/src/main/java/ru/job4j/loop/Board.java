@@ -5,12 +5,10 @@ package ru.job4j.loop;
  *
  * @author Alexander Krikunov (krikunov1990@mail.ru)
  */
-
 public class Board {
 
     /**
      * создает шахматную доску из х символов и пробелов.
-     *
      * @param width параметр ширина.
      * @param height параметр высота.
      * @return результат
@@ -18,9 +16,9 @@ public class Board {
     public String paint(int width, int height) {
         StringBuilder screen = new StringBuilder();
         String ln = System.lineSeparator();
-        for (int i = 0; i < height; i++) {
-            for (int j = 0; j < width; j++) {
-                if ((i + j) % 2 == 0) {
+        for (int out = 0; out < height; out++) {
+            for (int in = 0; in < width; in++) {
+                if ((out + in) % 2 == 0) {
                     screen.append("X");
                     } else {
                     screen.append(" ");

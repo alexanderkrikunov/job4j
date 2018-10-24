@@ -76,6 +76,6 @@ public class Triangle {
     * @return можно или нельзя построить треугольник.
     */
     private boolean exist(double ab, double ac, double bc) {
-        return (ab < ac + bc && ac < ab + bc && bc < ab + ac && ab > ac - bc && ac > ab - bc && bc > ab - ac);
+        return (ab < ac + bc && ac < ab + bc && bc < ab + ac);
     }
 }
