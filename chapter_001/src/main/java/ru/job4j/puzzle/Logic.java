@@ -70,16 +70,19 @@ public class Logic {
         int[][] table = this.convert();
         boolean result = false;
         for (int col = 0; col < table.length; col++) {
+            int hor = 0;
+            int vert = 0;
             for (int row = 0; row < table.length; row++) {
-                if (table[col][row] == 1 || table[row][col] == 1) {
+                if (table[col][row] == 1) {
+                    hor++;
+                }
+                if (table[row][col] == 1) {
+                    vert++;
+                }
+                if (hor == table.length || vert == table.length) {
                     result = true;
-                } else {
-                    result = false;
                     break;
                 }
-            }
-            if (result) {
-                break;
             }
         }
         return result;
