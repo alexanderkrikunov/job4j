@@ -2,6 +2,12 @@ package ru.job4j.tracker;
 
 import java.util.*;
 
+
+/**
+ * @author  Alexander Krikunov (krikunov1990@mail.ru)
+ * @version $Id$
+ * @since 0.1
+ */
 public class Tracker {
     private final Item[] items = new Item[100];
     private static final Random RN = new Random();
@@ -99,13 +105,13 @@ public class Tracker {
      * @return заявка
      */
     public Item findById(String id) {
-        Item item = new Item();
-        for (int index = 0; index < position; index++) {
-            if (this.items[index].getId().equals(id)) {
-                item = this.items[index];
+        Item result = null;
+        for (Item item : items) {
+            if (item != null && item.getId().equals(id)) {
+                result = item;
                 break;
             }
         }
-        return item;
+        return result;
     }
 }
