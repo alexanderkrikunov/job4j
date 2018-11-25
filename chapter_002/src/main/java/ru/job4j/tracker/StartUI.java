@@ -82,7 +82,7 @@ public class StartUI {
      * Метод реализует вывод всех заявок на экран.
      */
     public void showAllItem() {
-        System.out.println("\n" + "------------ Все заявки --------------");
+        System.out.println("------------ Все заявки --------------");
         Item[] item = this.tracker.findAll();
         for (int i = 0; i != item.length; i++) {
             System.out.println(item[i].toString());
@@ -151,14 +151,14 @@ public class StartUI {
      * Показывает меню.
      */
     public void showMenu() {
-        System.out.println("\n" + "Меню.");
+        System.out.println("Меню.");
         System.out.println("0. Add new Item");
         System.out.println("1. Show all items");
         System.out.println("2. Edit item");
         System.out.println("3. Delete item");
         System.out.println("4. Find item by Id");
         System.out.println("5. Find items by name");
-        System.out.println("6. Exit Program" + "\n");
+        System.out.println("6. Exit Program");
     }
 
     /**
