@@ -3,8 +3,6 @@ package ru.job4j.tracker;
 import org.junit.Test;
 import org.junit.After;
 import org.junit.Before;
-
-import javax.sound.midi.Track;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -82,28 +80,36 @@ public class StartUITest {
         Input input = new StubInput(new String[]{"1", "6"});
         new StartUI(input, tracker).init();
         StringBuilder menu = new StringBuilder()
-                .append("Меню.\n")
-                .append("0. Add new Item\n")
-                .append("1. Show all items\n")
-                .append("2. Edit item\n")
-                .append("3. Delete item\n")
-                .append("4. Find item by Id\n")
-                .append("5. Find items by name\n")
+                .append("Меню.")
+                .append(System.lineSeparator())
+                .append("0. Add new Item")
+                .append(System.lineSeparator())
+                .append("1. Show all items")
+                .append(System.lineSeparator())
+                .append("2. Edit item")
+                .append(System.lineSeparator())
+                .append("3. Delete item")
+                .append(System.lineSeparator())
+                .append("4. Find item by Id")
+                .append(System.lineSeparator())
+                .append("5. Find items by name")
+                .append(System.lineSeparator())
                 .append("6. Exit Program");
 
         assertThat(
                 new String(this.out.toByteArray()),
                 is(new StringBuilder()
                         .append(menu)
-                        .append("\n------------ Все заявки --------------")
-                        .append("\nЗаявка: ")
+                        .append(System.lineSeparator())
+                        .append("------------ Все заявки --------------")
+                        .append(System.lineSeparator())
+                        .append("Заявка: ")
                         .append("ID = " + id)
                         .append(", name = test name")
                         .append(", description = desc")
                         .append(", create = " + create)
-                        .append("\n" + menu)
-
-
+                        .append(System.lineSeparator())
+                        .append(menu)
                 )
         );
     }
