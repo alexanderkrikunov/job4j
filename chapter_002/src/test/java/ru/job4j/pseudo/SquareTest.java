@@ -10,9 +10,12 @@ public class SquareTest {
         Square square = new Square();
         assertThat(square.draw(), is(new StringBuilder()
                 .append("+++++++")
-                .append("\n+     +")
-                .append("\n+     +")
-                .append("\n+++++++")
+                .append(System.lineSeparator())
+                .append("+     +")
+                .append(System.lineSeparator())
+                .append("+     +")
+                .append(System.lineSeparator())
+                .append("+++++++")
                 .toString()
                 )
         );
