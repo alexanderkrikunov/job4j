@@ -3,6 +3,35 @@ package ru.job4j.tracker;
 import java.util.ArrayList;
 import java.util.List;
 
+class EditItem implements UserAction {
+    @Override
+    public int key() {
+        return 2;
+    }
+
+    @Override
+    public void execute(Input input, Tracker tracker) {
+        System.out.println("------------ Редактирование заявки --------------");
+        String id = input.ask("Введите ID заявки: ");
+        Item item = new Item(null, null);
+        if (tracker.replace(id, item)) {
+            String name = input.ask("Изменить имя заявки: ");
+            String desc = input.ask("Именить описание заявки: ");
+            item = new Item(name, desc);
+            tracker.replace(id, item);
+            System.out.println("------------ Заявка с ID : " + item.getId() + " отредактирована -----------");
+        } else {
+            System.out.println("Нет такой заявки!");
+        }
+    }
+
+    @Override
+    public String info() {
+        return "2. Редактирование заявки";
+
+    }
+}
+
 public class MenuTracker {
 
     private Input input;
@@ -61,7 +90,7 @@ public class MenuTracker {
         }
     }
 
-    private class ShowItem implements UserAction {
+    private static class ShowItem implements UserAction {
         @Override
         public int key() {
             return 1;
@@ -81,35 +110,6 @@ public class MenuTracker {
             return "1. Показать все заявки";
         }
     }
-
-    private class EditItem implements UserAction {
-        @Override
-        public int key() {
-            return 2;
-        }
-
-        @Override
-        public void execute(Input input, Tracker tracker) {
-            System.out.println("------------ Редактирование заявки --------------");
-            String id = input.ask("Введите ID заявки: ");
-            Item item = new Item(null, null);
-            if (tracker.replace(id, item)) {
-                String name = input.ask("Изменить имя заявки: ");
-                String desc = input.ask("Именить описание заявки: ");
-                item = new Item(name, desc);
-                tracker.replace(id, item);
-                System.out.println("------------ Заявка с ID : " + item.getId() + " отредактирована -----------");
-            } else {
-                System.out.println("Нет такой заявки!");
-            }
-        }
-
-        @Override
-        public String info() {
-            return "2. Редактирование заявки";
-
-            }
-        }
 
     private class DeleteItem implements UserAction {
         @Override
