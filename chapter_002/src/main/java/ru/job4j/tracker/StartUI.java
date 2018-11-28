@@ -25,6 +25,8 @@ public class StartUI {
      * @param input ввод данных.
      * @param tracker хранилище заявок.
      */
+    private int[] ranges = new int[] {0, 1, 2, 3, 4, 5, 6};
+
     public StartUI(Input input, Tracker tracker) {
         this.input = input;
         this.tracker = tracker;
@@ -42,7 +44,7 @@ public class StartUI {
         }
         do {
             menu.show();
-            menu.select(Integer.valueOf(input.ask("Выбрать действие: ")));
+            menu.select(Integer.valueOf(input.ask("Выбрать действие: ", ranges)));
         } while (!"y".equals(this.input.ask("Exit?(y): ")));
     }
 
@@ -51,6 +53,6 @@ public class StartUI {
      * @param args
      */
     public static void main(String[] args) {
-        new StartUI(new ConsoleInput(), new Tracker()).init();
+        new StartUI(new ValidateInput(), new Tracker()).init();
     }
 }
