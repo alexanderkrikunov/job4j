@@ -36,4 +36,17 @@ public class ValidateInputTest {
                 )
         );
     }
+
+    @Test
+    public void whenOutOfRange() {
+        ValidateInput input = new ValidateInput(
+                new StubInput(new String[]{"90", "1"})
+        );
+        input.ask("Выбрать действие: ", new int[]{1});
+        assertThat(this.mem.toString(),
+                is(
+                        String.format("Введите корректный ключ: %n")
+                )
+        );
+    }
 }
